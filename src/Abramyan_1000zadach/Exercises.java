@@ -13,12 +13,12 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin3 bg1 = new Exercises().new Begin3();
+        Exercises.Begin4 bg1 = new Exercises().new Begin4();
         bg1.run();
 
     }
 
-      private class Begin1{
+    private class Begin1{
         private int side;
 
         private int getPerimeter(){
@@ -81,6 +81,32 @@ public class Exercises {
         private void run(){
             enterSide();
             showSquarePerimeter();
+        }
+
+    }
+
+    private class Begin4{
+        private static final double P = 3.14;
+        private double diameter;
+        private double length;
+
+        private void enterDiameter(){
+            System.out.println("Введите диаметр окружности");
+            Scanner in = new Scanner(System.in);
+            diameter = in.nextDouble();
+        }
+        private void showLength(){
+            System.out.println("Длина окружности = " + getLength());
+        }
+        private double getLength(){
+            length = diameter * P;
+            return length;
+
+        }
+
+        private void run(){
+            enterDiameter();
+            showLength();
         }
 
     }
