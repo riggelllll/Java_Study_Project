@@ -13,7 +13,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin2 bg1 = new Exercises().new Begin2();
+        Exercises.Begin3 bg1 = new Exercises().new Begin3();
         bg1.run();
 
     }
@@ -56,6 +56,31 @@ public class Exercises {
         private void run(){
             enterSide();
             showSquare();
+        }
+
+    }
+
+    private class Begin3{
+        private int side1, side2;
+        void enterSide(){
+            System.out.println("Введите размеры сторон");
+            Scanner in = new Scanner(System.in);
+            side1 = in.nextInt();
+            side2 = in.nextInt();
+        }
+        private void showSquarePerimeter(){
+            System.out.println("Площадь равна = " + getSquare());
+            System.out.println("Периметер равен = " + getPerimeter());
+        }
+        private int getSquare(){
+            return side1 * side2;
+        }
+        private int getPerimeter(){
+            return 2 * (side1 + side2);
+        }
+        private void run(){
+            enterSide();
+            showSquarePerimeter();
         }
 
     }
