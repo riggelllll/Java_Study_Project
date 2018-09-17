@@ -13,7 +13,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin6 bg1 = new Exercises().new Begin6();
+        Exercises.Begin7 bg1 = new Exercises().new Begin7();
         bg1.run();
 
     }
@@ -172,6 +172,34 @@ public class Exercises {
         private void run(){
             enterEdges();
             showVolumeSquare();
+        }
+    }
+
+    private class Begin7{
+        private static final double P = 3.14;
+        private double radius;
+        private double length;
+        private double square;
+
+        private void enterRadius(){
+            System.out.println("Введите радиус");
+            Scanner in = new Scanner(System.in);
+            radius = in.nextDouble();
+        }
+        private void showLengthSquare(){
+            System.out.println("Длина равна = " + getLength() + " Площадь равна = " + getSquare());
+        }
+        private double getLength(){
+            length = 2 * P * radius;
+            return length;
+        }
+        private double getSquare(){
+            square = P * (radius * radius);
+            return square;
+        }
+        private void run(){
+            enterRadius();
+            showLengthSquare();
         }
     }
 
