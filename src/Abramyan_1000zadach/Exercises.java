@@ -15,8 +15,13 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin15 bg1 = new Exercises().new Begin15();
-        bg1.run();
+        //Exercises.Begin17 bg1 = new Exercises().new Begin17();
+        Exercises.Begin17.Point p1 = new Exercises().new Begin17().new Point(3);
+        Exercises.Begin17.Point p2 = new Exercises().new Begin17().new Point(5);
+        Exercises.Begin17.Point p3 = new Exercises().new Begin17().new Point(7);
+        Exercises.Begin17.Segment s1 = new Exercises().new Begin17().new Segment();
+        System.out.println("Длина равна " + s1.getLength(p1, p2));
+
 
     }
 
@@ -343,6 +348,34 @@ public class Exercises {
         private void run(){
             enterSquare();
             System.out.println("Диаметр  = " + getDiameter() + " Длина = " + getLength());
+        }
+    }
+
+    private class Begin16{
+        private int getDistance(int a, int b){
+            return Math.abs(b - a);
+        }
+        private void run(){
+            System.out.println("Растояние = " + getDistance(5, 2));
+        }
+
+    }
+
+    private class Begin17{
+        private class Point{
+            private int coordinate;
+            Point(int coordinate){
+                this.coordinate = coordinate;
+            }
+        }
+
+        private class Segment{
+            private int getLength(Point a, Point b){
+                return b.coordinate - a.coordinate;
+            }
+            private int getLengthSum(int a, int b){
+                return a + b;
+            }
         }
     }
 
