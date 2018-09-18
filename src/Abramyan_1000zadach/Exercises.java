@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin13 bg1 = new Exercises().new Begin13();
+        Exercises.Begin15 bg1 = new Exercises().new Begin15();
         bg1.run();
 
     }
@@ -300,6 +300,49 @@ public class Exercises {
         private void run(){
             enterRadius();
             System.out.println("S1 = " + getSquare(r1) + " S2 = " + getSquare(r2) + " S3 = " + getS3());
+        }
+    }
+
+    private class Begin14{
+        private static final double P = 3.14;
+        private double length, radius, square;
+
+        private void enterLength(){
+            System.out.println("Введите длину окружности");
+            Scanner in = new Scanner(System.in);
+            length = in.nextInt();
+        }
+        private double getRadius(){
+            return length / (2 * P);
+        }
+        private double getSquare(){
+            return P * Math.pow(getRadius(), 2);
+        }
+        private void run(){
+            enterLength();
+            System.out.println("Радиус равен = " + getRadius() + " Площадь равна = " + getSquare());
+        }
+    }
+
+    private class Begin15{
+        private double square, diameter, length;
+        private static final double P = 3.14;
+
+        private void enterSquare(){
+            System.out.println("Введите площадь круга");
+            Scanner in = new Scanner(System.in);
+            square = in.nextInt();
+        }
+        private double getDiameter(){
+            return Math.sqrt(square / P);
+        }
+        private double getLength(){
+            return P * getDiameter();
+        }
+
+        private void run(){
+            enterSquare();
+            System.out.println("Диаметр  = " + getDiameter() + " Длина = " + getLength());
         }
     }
 
