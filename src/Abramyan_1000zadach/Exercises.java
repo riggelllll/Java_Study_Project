@@ -1,5 +1,6 @@
 package Abramyan_1000zadach;
 
+import java.lang.reflect.Array;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin10 bg1 = new Exercises().new Begin10();
+        Exercises.Begin13 bg1 = new Exercises().new Begin13();
         bg1.run();
 
     }
@@ -254,6 +255,52 @@ public class Exercises {
         }
 
 
+    }
+    
+    private class Begin12{
+        private int catheter1, catheter2, hypotenuse, perimeter;
+
+        private void enterCatheters(){
+            System.out.println("Введите значения ");
+            Scanner in = new Scanner(System.in);
+            catheter1 = in.nextInt();
+            catheter2 = in.nextInt();
+        }
+
+        private int getHypotenuse(){
+            return (int)Math.sqrt(Math.pow(catheter1, 2) + Math.pow(catheter2, 2));
+        }
+        private int getPerimeter(){
+            return catheter1 + catheter2 + hypotenuse;
+        }
+        private void run(){
+            enterCatheters();
+            System.out.println("Гипотенуза равна = " + getHypotenuse() + " Периметер равен = " + getPerimeter());
+        }
+
+    }
+
+    private class Begin13{
+        private int r1, r2; //R1 > R2
+        private double s1, s2, s3;
+        private static final double P = 3.14;
+
+        private void enterRadius(){
+            System.out.println("Введите радиусы");
+            Scanner in = new Scanner(System.in);
+            r1 = in.nextInt();
+            r2 = in.nextInt();
+        }
+        private double getSquare(int radius){
+           return P * Math.pow(radius, 2);
+        }
+        private double getS3(){
+            return s1 -s2;
+        }
+        private void run(){
+            enterRadius();
+            System.out.println("S1 = " + getSquare(r1) + " S2 = " + getSquare(r2) + " S3 = " + getS3());
+        }
     }
 
 }
