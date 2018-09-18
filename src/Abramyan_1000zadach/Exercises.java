@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin19 bg1 = new Exercises().new Begin19();
-        bg1.func();
+        Exercises.Begin20 bg1 = new Exercises().new Begin20();
+        bg1.showDistance();
 
 
 
@@ -411,6 +411,22 @@ public class Exercises {
 
 
 
+    }
+
+    private class Begin20{
+        private class Point{
+            private int coordX, coordY;
+            Point(int coordX, int coordY){
+                this.coordX = coordX;
+                this.coordY = coordY;
+            }
+        }
+        private void showDistance(){
+            Point p1 = new Point(1, 1);
+            Point p2 = new Point(5, 5);
+            int distance = (int)Math.sqrt(Math.pow((p2.coordX - p1.coordX), 2) + Math.pow((p2.coordY - p1.coordY), 2));
+            System.out.println("Растояние  = " +  distance);
+        }
     }
 
 }
