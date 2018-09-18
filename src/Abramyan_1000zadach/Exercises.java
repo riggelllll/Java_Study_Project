@@ -15,12 +15,9 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        //Exercises.Begin17 bg1 = new Exercises().new Begin17();
-        Exercises.Begin17.Point p1 = new Exercises().new Begin17().new Point(3);
-        Exercises.Begin17.Point p2 = new Exercises().new Begin17().new Point(5);
-        Exercises.Begin17.Point p3 = new Exercises().new Begin17().new Point(7);
-        Exercises.Begin17.Segment s1 = new Exercises().new Begin17().new Segment();
-        System.out.println("Длина равна " + s1.getLength(p1, p2));
+        Exercises.Begin19 bg1 = new Exercises().new Begin19();
+        bg1.func();
+
 
 
     }
@@ -377,6 +374,43 @@ public class Exercises {
                 return a + b;
             }
         }
+    }
+
+    private class Begin19{
+        private class Point{
+            private int coordX, coordY;
+            Point(int coordX, int coordY){
+                this.coordX = coordX;
+                this.coordY = coordY;
+            }
+        }
+        private class Rectangle{
+            private Point p1 = new Point(1, 1);
+            private Point p2 = new Point(5, 5);
+            private int lengthSide1, lengthSide2;
+            private void getSidesLength(){
+                lengthSide1 = p2.coordX - p1.coordX;
+                lengthSide2 = p2.coordY - p1.coordY;
+            }
+            private int getPerimeter(){
+                return (lengthSide1 + lengthSide2) * 2;
+            }
+            private int getSquare(){
+                return lengthSide1 * lengthSide2;
+            }
+            private void show(){
+                getSidesLength();
+                System.out.println("Периметер = " + getPerimeter() + " Площадь = " + getSquare());
+            }
+        }
+
+     private void func(){
+            Rectangle r = new Rectangle();
+            r.show();
+     }
+
+
+
     }
 
 }
