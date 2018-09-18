@@ -1,5 +1,6 @@
 package Abramyan_1000zadach;
 
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -13,7 +14,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin7 bg1 = new Exercises().new Begin7();
+        Exercises.Begin10 bg1 = new Exercises().new Begin10();
         bg1.run();
 
     }
@@ -201,6 +202,58 @@ public class Exercises {
             enterRadius();
             showLengthSquare();
         }
+    }
+
+    private class Begin8{
+        private int average(int a, int b){
+            return (a+b) / 2;
+        }
+
+        private void run(int a, int b){
+            System.out.println("Среднее арифметическое = " + average(a, b));;
+
+        }
+    }
+
+    private class Begin9{
+        private double geometricMean(double a, double b){
+           if(a < 0 | b < 0){
+               System.out.println("Значение должны быть положительными");
+           }
+           return Math.sqrt(a * b);
+        }
+        private void run(){
+            System.out.println("Среднеее геометрическое " + geometricMean(5,5 ));
+        }
+    }
+
+    private class Begin10{
+        private int a , b;
+
+        private void enterValues(){
+            System.out.println("Введите значения ");
+            Scanner in = new Scanner(System.in);
+            a = in.nextInt();
+            b = in.nextInt();
+        }
+        private int sum(){
+            return a + b;
+        }
+        private int difference(){
+            return a - b;
+        }
+        private int composition(){
+            return a * b;
+        }
+        private int quotient(){
+            return (int)(Math.pow(a , 2) / Math.pow(b , 2));
+        }
+        private void run(){
+            enterValues();
+            System.out.println("Сумма = " + sum() + " Разница = " + difference() + " Произведение = " + composition() + " Частное = " + quotient());
+        }
+
+
     }
 
 }
