@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin20 bg1 = new Exercises().new Begin20();
-        bg1.showDistance();
+        Exercises.Begin21 bg1 = new Exercises().new Begin21();
+        bg1.run();
 
 
 
@@ -426,6 +426,47 @@ public class Exercises {
             Point p2 = new Point(5, 5);
             int distance = (int)Math.sqrt(Math.pow((p2.coordX - p1.coordX), 2) + Math.pow((p2.coordY - p1.coordY), 2));
             System.out.println("Растояние  = " +  distance);
+        }
+    }
+
+    private class Begin21{
+        private class Point{
+            private int coordX, coordY;
+            Point(int coordX, int coordY){
+                this.coordX = coordX;
+                this.coordY = coordY;
+            }
+        }
+        private class Triangle{
+            private Point p1, p2, p3;
+            private int side1, side2, side3;
+            private int perimeter, square;
+            Triangle(){
+                p1 = new Point(1,1);
+                p2 = new Point(3,3);
+                p3 = new Point(5,5);
+            }
+            private int getDistance(Point p1, Point p2){
+                return (int)Math.sqrt(Math.pow((p2.coordX - p1.coordX), 2) + Math.pow((p2.coordY - p1.coordY), 2));
+            }
+            private void setDistance(){
+                side1 = getDistance(p1, p2);
+                side2 = getDistance(p2, p3);
+                side3 = getDistance(p1, p3);
+            }
+            private int getPerimeter(){
+                return perimeter = side1 + side2 + side3;
+            }
+            private int getSquare(){
+                return square = (int)Math.sqrt(perimeter * (perimeter - side1) * (perimeter - side2) * (perimeter - side3));
+            }
+        }
+        private void run(){
+            Triangle triangle = new Triangle();
+            triangle.setDistance();
+            triangle.getPerimeter();
+            triangle.getSquare();
+            System.out.println("Периметер = " + triangle.perimeter + " Площадь = " + triangle.getSquare());
         }
     }
 
