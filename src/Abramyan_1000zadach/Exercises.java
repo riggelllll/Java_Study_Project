@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin21 bg1 = new Exercises().new Begin21();
-        bg1.run();
+        Exercises.Begin22 bg1 = new Exercises().new Begin22();
+        bg1.swap();
 
 
 
@@ -467,6 +467,21 @@ public class Exercises {
             triangle.getPerimeter();
             triangle.getSquare();
             System.out.println("Периметер = " + triangle.perimeter + " Площадь = " + triangle.getSquare());
+        }
+    }
+
+    private class Begin22{
+        private int a, b;
+        Begin22(){
+            a = 5;
+            b = 10;
+        }
+        private void swap(){
+            System.out.println("A and B before " + a + " " + b);
+            a = a * b;
+            b = a / b;
+            a = a / b;
+            System.out.println("A and B after " + a + " " + b);
         }
     }
 
