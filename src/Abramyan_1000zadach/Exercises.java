@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin28 bg1 = new Exercises().new Begin28();
-        bg1.getA();
+        Exercises.Begin29 bg1 = new Exercises().new Begin29();
+        bg1.show();
 
 
 
@@ -568,6 +568,49 @@ public class Exercises {
             a10 = a5 * a5;
             a15 = a10 * a5;
             System.out.println("A^2 = " + a2 + " A^3 = " + a3 + " A5 = " + a5 + " A10 = " + a10 + " A15 = " + a15);
+        }
+    }
+
+    private class Begin29{
+        private int alpha;
+        private static final double P = 3.14;
+        private void enterAlpha(){
+            do {
+                System.out.println("Введите значение угла в градусах");
+                Scanner in = new Scanner(System.in);
+                alpha = in.nextInt();
+            }while (alpha < 0 || alpha > 360);
+        }
+
+        private double getRadians(){
+            return alpha * (P / 180);
+        }
+
+        private void show(){
+            enterAlpha();
+            System.out.println("Значение в радианах " + getRadians());
+        }
+    }
+
+    private class Begin30{
+        private int alpha;
+        private static final double P = 3.14;
+
+        private void enterAlpha(){
+            do {
+                System.out.println("Введите значение угла в градусах");
+                Scanner in = new Scanner(System.in);
+                alpha = in.nextInt();
+            }while (alpha < 0 || alpha > 2 * P);
+        }
+
+        private double getRadians(){
+            return alpha * (P / 180);
+        }
+
+        private void show(){
+            enterAlpha();
+            System.out.println("Значение в радианах " + getRadians());
         }
     }
 
