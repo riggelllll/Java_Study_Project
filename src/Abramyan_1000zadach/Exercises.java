@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin36 bg1 = new Exercises().new Begin36();
+        Exercises.Begin39 bg1 = new Exercises().new Begin39();
         bg1.show();
 
 
@@ -694,6 +694,67 @@ public class Exercises {
             getDiffS();
             System.out.println("растояние = " + (diffS + s));
         }
+    }
+    private class Begin37{
+        private int v1, v2, s, t, diffS;
+        Begin37(){
+            v1 = 60;
+            v2 = 100;
+            s = 1000;
+            t = 2;
+        }
+        private int getDiffS(){
+            return diffS = (t * (v1 + v2));
+        }
+        private void show(){
+            getDiffS();
+            System.out.println("растояние = " + (Math.abs(diffS - s)));
+        }
+    }
+    private class Begin38{
+        private int a, b;
+        private int getX(){
+            return -(b / a);
+        }
+    }
+    private class Begin39{
+        private int a, b, c, d, x1, x2;
+        Begin39(){
+            a = 3;
+            b = 10;
+            c = 7;
+        }
+        private int getD(){
+            return d = (int)Math.pow(b, 2) - 4 * a * c;
+        }
+        private void getX(){
+            x1 = (int)(-b + Math.sqrt(d)) / (2 * a);
+            x2 = (int)(-b - Math.sqrt(d)) / (2 * a);
+        }
+        private void show(){
+            getD();
+            getX();
+            System.out.println("корни = " + x1 + " " + x2);
+        }
+    }
+    private class Begin40{
+        private int a1, b1, c1, a2, b2, c2, x, y, d;
+        Begin40(){
+            a1 = 2;
+            a2 = 20;
+            b1 = 3;
+            b2 = 30;
+            c1 = 2;
+            c2 = 20;
+        }
+        private int getD(){
+            return d = a1 * b2 - a2 * b1;
+        }
+        private void getXY(){
+            x = (c1 * b2 - c2 * b1) / d;
+            y = (a1 * c2 - a2 * c1) / d;
+        }
+
     }
 }
 
