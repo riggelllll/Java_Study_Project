@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin25 bg1 = new Exercises().new Begin25();
-        bg1.run();
+        Exercises.Begin28 bg1 = new Exercises().new Begin28();
+        bg1.getA();
 
 
 
@@ -532,6 +532,43 @@ public class Exercises {
             System.out.println("Y равен " + findY());
         }
 
+    }
+
+    private class Begin26{
+        private static final int x = 5;
+        private int findY(){
+            return (int)(4 * Math.pow(x - 3, 6) - 7 * Math.pow(x - 3, 3) + 2);
+        }
+        private void run(){
+            System.out.println("Y равен " + findY());
+        }
+    }
+
+    private class Begin27{
+        private int a, a2, a4, a8;
+        private static final int x = 2;
+        private void getA(){
+            a2 = x * x;
+            a4 = a2 * a2;
+            a8 = a4 * a4;
+            System.out.println("A^2 = " + a2 + " A^4 = " + a4 + " A8 = " + a8);
+        }
+    }
+
+    private class Begin28{
+        private int a, a2, a3, a5, a10, a15;
+        private static final int x = 2;
+        Begin28(){
+            a = x;
+        }
+        private void getA(){
+            a2 = x * x;
+            a3 = a2 * a;
+            a5 = a3 * a2;
+            a10 = a5 * a5;
+            a15 = a10 * a5;
+            System.out.println("A^2 = " + a2 + " A^3 = " + a3 + " A5 = " + a5 + " A10 = " + a10 + " A15 = " + a15);
+        }
     }
 
 }
