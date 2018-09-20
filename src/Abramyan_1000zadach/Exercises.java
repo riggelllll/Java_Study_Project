@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin29 bg1 = new Exercises().new Begin29();
-        bg1.show();
+        Exercises.Begin32 bg1 = new Exercises().new Begin32();
+        bg1.showT();
 
 
 
@@ -42,7 +42,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin2{
         private int side;
 
@@ -63,7 +62,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin3{
         private int side1, side2;
         void enterSide(){
@@ -88,7 +86,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin4{
         private static final double P = 3.14;
         private double diameter;
@@ -114,7 +111,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin5{
         private int edgeLength;
         private int volume;
@@ -147,7 +143,6 @@ public class Exercises {
 
 
     }
-
     private class Begin6{
         private int edgeLength1;
         private int edgeLength2;
@@ -178,7 +173,6 @@ public class Exercises {
             showVolumeSquare();
         }
     }
-
     private class Begin7{
         private static final double P = 3.14;
         private double radius;
@@ -206,7 +200,6 @@ public class Exercises {
             showLengthSquare();
         }
     }
-
     private class Begin8{
         private int average(int a, int b){
             return (a+b) / 2;
@@ -217,7 +210,6 @@ public class Exercises {
 
         }
     }
-
     private class Begin9{
         private double geometricMean(double a, double b){
            if(a < 0 | b < 0){
@@ -229,7 +221,6 @@ public class Exercises {
             System.out.println("Среднеее геометрическое " + geometricMean(5,5 ));
         }
     }
-
     private class Begin10{
         private int a , b;
 
@@ -258,7 +249,6 @@ public class Exercises {
 
 
     }
-    
     private class Begin12{
         private int catheter1, catheter2, hypotenuse, perimeter;
 
@@ -281,7 +271,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin13{
         private int r1, r2; //R1 > R2
         private double s1, s2, s3;
@@ -304,7 +293,6 @@ public class Exercises {
             System.out.println("S1 = " + getSquare(r1) + " S2 = " + getSquare(r2) + " S3 = " + getS3());
         }
     }
-
     private class Begin14{
         private static final double P = 3.14;
         private double length, radius, square;
@@ -325,7 +313,6 @@ public class Exercises {
             System.out.println("Радиус равен = " + getRadius() + " Площадь равна = " + getSquare());
         }
     }
-
     private class Begin15{
         private double square, diameter, length;
         private static final double P = 3.14;
@@ -347,7 +334,6 @@ public class Exercises {
             System.out.println("Диаметр  = " + getDiameter() + " Длина = " + getLength());
         }
     }
-
     private class Begin16{
         private int getDistance(int a, int b){
             return Math.abs(b - a);
@@ -357,7 +343,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin17{
         private class Point{
             private int coordinate;
@@ -375,7 +360,6 @@ public class Exercises {
             }
         }
     }
-
     private class Begin19{
         private class Point{
             private int coordX, coordY;
@@ -412,7 +396,6 @@ public class Exercises {
 
 
     }
-
     private class Begin20{
         private class Point{
             private int coordX, coordY;
@@ -428,7 +411,6 @@ public class Exercises {
             System.out.println("Растояние  = " +  distance);
         }
     }
-
     private class Begin21{
         private class Point{
             private int coordX, coordY;
@@ -469,7 +451,6 @@ public class Exercises {
             System.out.println("Периметер = " + triangle.perimeter + " Площадь = " + triangle.getSquare());
         }
     }
-
     private class Begin22{
         private int a, b;
         Begin22(){
@@ -484,7 +465,6 @@ public class Exercises {
             System.out.println("A and B after " + a + " " + b);
         }
     }
-
     private class Begin23{
         private int a, b, c, x;
 
@@ -503,7 +483,6 @@ public class Exercises {
             System.out.println("After " + a + " " + b + " " + c);
         }
     }
-
     private class Begin24{
         private int a, b, c, x;
 
@@ -522,7 +501,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin25{
         private static final int x = 5;
         private int findY(){
@@ -533,7 +511,6 @@ public class Exercises {
         }
 
     }
-
     private class Begin26{
         private static final int x = 5;
         private int findY(){
@@ -543,7 +520,6 @@ public class Exercises {
             System.out.println("Y равен " + findY());
         }
     }
-
     private class Begin27{
         private int a, a2, a4, a8;
         private static final int x = 2;
@@ -554,7 +530,6 @@ public class Exercises {
             System.out.println("A^2 = " + a2 + " A^4 = " + a4 + " A8 = " + a8);
         }
     }
-
     private class Begin28{
         private int a, a2, a3, a5, a10, a15;
         private static final int x = 2;
@@ -570,7 +545,6 @@ public class Exercises {
             System.out.println("A^2 = " + a2 + " A^3 = " + a3 + " A5 = " + a5 + " A10 = " + a10 + " A15 = " + a15);
         }
     }
-
     private class Begin29{
         private int alpha;
         private static final double P = 3.14;
@@ -591,7 +565,6 @@ public class Exercises {
             System.out.println("Значение в радианах " + getRadians());
         }
     }
-
     private class Begin30{
         private int alpha;
         private static final double P = 3.14;
@@ -613,7 +586,39 @@ public class Exercises {
             System.out.println("Значение в радианах " + getRadians());
         }
     }
+    private class Begin31{
+        private double temperatureF;
 
+        private void enterTemperature(){
+            System.out.println("Введите значение температуры");
+            Scanner in = new Scanner(System.in);
+            temperatureF = in.nextDouble();
+        }
+        private double getTemperatureC(){
+            return (temperatureF - 32) * 5 / 9;
+        }
+        private void showT(){
+            enterTemperature();
+            System.out.println("Температура " + (int)getTemperatureC());
+        }
+
+    }
+    private class Begin32{
+        private double temperatureC;
+
+        private void enterTemperature(){
+            System.out.println("Введите значение температуры");
+            Scanner in = new Scanner(System.in);
+            temperatureC = in.nextDouble();
+        }
+        private double getTemperatureF(){
+            return temperatureC * 1.8 + 32;
+        }
+        private void showT(){
+            enterTemperature();
+            System.out.println("Температура " + (int)getTemperatureF());
+        }
+    }
 }
 
 
