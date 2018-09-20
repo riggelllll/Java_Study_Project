@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin32 bg1 = new Exercises().new Begin32();
-        bg1.showT();
+        Exercises.Begin36 bg1 = new Exercises().new Begin36();
+        bg1.show();
 
 
 
@@ -617,6 +617,82 @@ public class Exercises {
         private void showT(){
             enterTemperature();
             System.out.println("Температура " + (int)getTemperatureF());
+        }
+    }
+    private class Begin33{
+        private int a, x, kg1, ykg,  y;
+        Begin33(){
+            a = 80;
+            x = 10;
+            y = 5;
+        }
+        private int getKg1(){
+            return kg1 =  a / x;
+        }
+        private int getYkg(){
+            return ykg = kg1 * y;
+        }
+        private void show(){
+            getKg1();
+            getYkg();
+            System.out.println("Килограм = " + kg1 + " Yкг = " + ykg);
+        }
+
+    }
+    private class Begin34{
+        private int x, a, y, b, kg1Shok, kg1Iris;
+        private double dif;
+        Begin34(){
+            x = 10;
+            a = 80;
+            y = 5;
+            b = 100;
+        }
+        private void getPrices(){
+            kg1Shok = a / x;
+            kg1Iris = b / y;
+        }
+        private void getDif(){
+            dif = kg1Shok / kg1Iris;
+        }
+        private void show(){
+            getPrices();
+            getDif();
+            System.out.println("1kgshok " + kg1Shok + " 1kgiris " + kg1Iris + " Diff " + dif);
+        }
+    }
+    private class Begin35{
+        private double v, u, t1, t2, s;
+        Begin35(){
+            v = 30;
+            u = 5;
+            t1 = 2;
+            t2 = 1;
+        }
+        private double getS(){
+            double sLake = t1 * v;
+            double sRiver = t2 * (v - u);
+            return sLake + sRiver;
+        }
+        private void show(){
+            System.out.println("Путь равен " + getS());
+        }
+    }
+    private class Begin36{
+        private int v1, v2, s, t, diffS, fullS;
+        Begin36(){
+            v1 = 60;
+            v2 = 100;
+            s = 1000;
+            t = 2;
+
+        }
+        private int getDiffS(){
+            return diffS = (t * (v1 + v2));
+        }
+        private void show(){
+            getDiffS();
+            System.out.println("растояние = " + (diffS + s));
         }
     }
 }
