@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin22 bg1 = new Exercises().new Begin22();
-        bg1.swap();
+        Exercises.Begin25 bg1 = new Exercises().new Begin25();
+        bg1.run();
 
 
 
@@ -483,6 +483,55 @@ public class Exercises {
             a = a / b;
             System.out.println("A and B after " + a + " " + b);
         }
+    }
+
+    private class Begin23{
+        private int a, b, c, x;
+
+        Begin23(){
+             a = 5;
+             b = 10;
+             c = 15;
+        }
+
+        private void swap(){
+            System.out.println("Before " + a + " " + b + " " + c);
+            x = b;
+            b = a;
+            a = c;
+            c = x;
+            System.out.println("After " + a + " " + b + " " + c);
+        }
+    }
+
+    private class Begin24{
+        private int a, b, c, x;
+
+        Begin24(){
+            a = 5;
+            b = 10;
+            c = 15;
+        }
+        private void swap(){
+            System.out.println("Before " + a + " " + b + " " + c);
+            x = c;
+            c = a;
+            a = b;
+            b = x;
+            System.out.println("After " + a + " " + b + " " + c);
+        }
+
+    }
+
+    private class Begin25{
+        private static final int x = 5;
+        private int findY(){
+            return (int)(3 * Math.pow(x, 6) - 6 * Math.pow(x, 2) - 7);
+        }
+        private void run(){
+            System.out.println("Y равен " + findY());
+        }
+
     }
 
 }
