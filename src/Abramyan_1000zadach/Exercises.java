@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer10 in1 = new Exercises().new Integer10();
-        in1.show();
+        Exercises.Integer15 in1 = new Exercises().new Integer15();
+        in1.run();
 
 
 
@@ -919,6 +919,111 @@ public class Exercises {
             getMidN();
             getRightN();
             System.out.println("Right " + rightN + " mid " + midN);
+        }
+    }
+    private class Integer11{
+        private int number, leftN, midN, rightN, sum, composition;
+        private static final int HUNDREAD = 100;
+        private static final int DECIMAL = 10;
+        Integer11(){
+            number = 345;
+        }
+        private int getLeftN(){
+            return leftN = number / HUNDREAD;
+        }
+        private int getMidN(){
+            return midN = (number % HUNDREAD) / DECIMAL;
+        }
+        private int getRightN(){
+            return rightN = (number % HUNDREAD) % DECIMAL;
+        }
+        private int getSum(){
+            return sum = leftN + midN + rightN;
+        }
+        private int getComposition(){
+            return composition = leftN * midN * rightN;
+        }
+        private void show(){
+            getLeftN();
+            getMidN();
+            getRightN();
+            getSum();
+            getComposition();
+            System.out.println("sum " + sum + " composition " + composition);
+        }
+    }
+    private class Integer12{
+        private int num, numAfter;
+        Integer12(){
+            num = 458;
+        }
+        private void getReverse(){
+            Integer in = new Integer(num);
+            StringBuffer buffer = new StringBuffer(in.toString());
+            buffer = buffer.reverse();
+            numAfter = Integer.parseInt(buffer.toString());
+        }
+        private void run(){
+            getReverse();
+            System.out.println("Before " + num + " After " + numAfter);
+        }
+    }
+    private class Integer13{
+        private int num;
+        String str;
+        Integer13(){
+            num = 456;
+        }
+        private void getNewNum(){
+            Integer in = new Integer(num);
+            char tmp;
+            StringBuffer buffer = new StringBuffer(in.toString());
+            tmp = buffer.charAt(0);
+            buffer.deleteCharAt(0);
+            buffer.append(tmp);
+            str = buffer.toString();
+        }
+        private void run(){
+            getNewNum();
+            System.out.println(str);
+        }
+    }
+    private class Integer14{
+        private int num;
+        String str;
+        Integer14(){
+            num = 456;
+        }
+        private void getNewNum(){
+            Integer in = new Integer(num);
+            char tmp;
+            StringBuffer buffer = new StringBuffer(in.toString());
+            tmp = buffer.charAt(2);
+            buffer.deleteCharAt(2);
+            buffer.insert(0, tmp);
+            str = buffer.toString();
+        }
+        private void run(){
+            getNewNum();
+            System.out.println(str);
+        }
+    }
+    private class Integer15{
+        private static final int NUM = 532;
+        private int newNum;
+        private void changeNum(){
+            Integer in = new Integer(NUM);
+            char tmp;
+
+            StringBuffer buffer = new StringBuffer(in.toString());
+            tmp = buffer.charAt(0);
+            buffer.setCharAt(0, buffer.charAt(1));
+            buffer.setCharAt(1, tmp);
+            newNum = Integer.parseInt(buffer.toString());
+        }
+        private void run(){
+            changeNum();
+            System.out.println("Before " + NUM + " AFTER " + newNum);
         }
     }
 
