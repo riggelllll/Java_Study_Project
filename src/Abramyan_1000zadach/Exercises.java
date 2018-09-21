@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Begin39 bg1 = new Exercises().new Begin39();
-        bg1.show();
+        Exercises.Integer1 in1 = new Exercises().new Integer1();
+        in1.run();
 
 
 
@@ -754,6 +754,23 @@ public class Exercises {
             x = (c1 * b2 - c2 * b1) / d;
             y = (a1 * c2 - a2 * c1) / d;
         }
+
+    }
+    private class Integer1{
+        private int lengthCm, lengthM;
+        private int meter = 100;
+        Integer1(){
+            lengthCm = 535;
+        }
+        private int getLengthM(){
+            return lengthM = lengthCm / meter;
+        }
+        private void run(){
+            getLengthM();
+            System.out.println("В сантиметрах " + lengthCm + " В метрах " + lengthM);
+        }
+    }
+    private class Integer2{
 
     }
 }
