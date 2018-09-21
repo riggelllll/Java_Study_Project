@@ -15,8 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer5 in1 = new Exercises().new Integer5();
-        in1.run();
+        Exercises.Integer10 in1 = new Exercises().new Integer10();
+        in1.show();
 
 
 
@@ -828,6 +828,100 @@ public class Exercises {
             System.out.println("Количество сегментов " + freeSegments);
         }
     }
+    private class Integer6{
+        private int number, leftN, rightN;
+        private static final int DECIMAL = 10;
+        Integer6(){
+            number = 12;
+        }
+        private void getNumbers(){
+            leftN = number / DECIMAL;
+            rightN = number % DECIMAL;
+        }
+        private void run(){
+            getNumbers();
+            System.out.println("Левая цифра " + leftN + " Правая цифра " + rightN);
+        }
+    }
+    private class Integer7{
+        private int number, leftN, rightN, sum,composition;
+        private static final int DECIMAL = 10;
+        Integer7(){
+            number = 12;
+        }
+        private void getNumbers(){
+            leftN = number / DECIMAL;
+            rightN = number % DECIMAL;
+        }
+        private int getSum(){
+            return sum = leftN + rightN;
+        }
+        private int getComposition(){
+            return composition = leftN * rightN;
+        }
+        private void run(){
+            getNumbers();
+            getComposition();
+            getSum();
+            System.out.println("sum " + sum + " composition " + composition);
+        }
+    }
+    private class Integer8{
+        private int number, leftN, rightN, reverse;
+        private static final int DECIMAL = 10;
+        Integer8(){
+            number = 12;
+        }
+        private void getNumbers(){
+            leftN = number / DECIMAL;
+            rightN = number % DECIMAL;
+        }
+        private void getReverse(){
+            StringBuffer buffer = new StringBuffer();
+            buffer.append(rightN);
+            buffer.append(leftN);
+            System.out.println(buffer);reverse = new Integer(buffer.toString());
+        }
+        private void run(){
+            getNumbers();
+            getReverse();
+            System.out.println("Before " + number + " After " + reverse);
+        }
+    }
+    private class Integer9{
+        private int number, leftN;
+        private static final int hundread = 100;
+        Integer9(){
+            number = 345;
+        }
+        private int getLeftN(){
+            return leftN = number / hundread;
+        }
+        private void show(){
+            getLeftN();
+            System.out.println("Num " + number + " left " + leftN);
+        }
+    }
+    private class Integer10{
+        private int number, midN, rightN;
+        private static final int HUNDREAD = 100;
+        private static final int DECIMAL = 10;
+        Integer10(){
+            number = 345;
+        }
+        private int getMidN(){
+            return midN = (number % HUNDREAD) / DECIMAL;
+        }
+        private int getRightN(){
+            return rightN = (number % HUNDREAD) % DECIMAL;
+        }
+        private void show(){
+            getMidN();
+            getRightN();
+            System.out.println("Right " + rightN + " mid " + midN);
+        }
+    }
+
 }
 
 
