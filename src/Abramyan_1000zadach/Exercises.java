@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer1 in1 = new Exercises().new Integer1();
+        Exercises.Integer5 in1 = new Exercises().new Integer5();
         in1.run();
 
 
@@ -771,7 +771,62 @@ public class Exercises {
         }
     }
     private class Integer2{
+        private int weightKg, weightT;
+        private static final int ton = 1000;
+        Integer2(){
+            weightKg = 3500;
+        }
+        private int getLengthM(){
+            return weightT = weightKg / ton;
+        }
+        private void run(){
+            getLengthM();
+            System.out.println("В килограммах " + weightKg + " В тоннах " + weightT);
+        }
 
+    }
+    private class Integer3{
+        private int fileByteSize, fileKbSize ;
+        private static final int KB = 1024;
+        Integer3(){
+            fileByteSize = 3500;
+        }
+        private int getLengthM(){
+            return fileKbSize = fileByteSize / KB;
+        }
+        private void run(){
+            getLengthM();
+            System.out.println("В fileByteSize " + fileByteSize + " В fileKbSize " + fileKbSize);
+        }
+
+    }
+    private class Integer4{
+        private int a, b, segments;
+        Integer4(){
+            a = 20;
+            b = 7;
+        }
+        private int getSegments(){
+            return segments =  a / b;
+        }
+        private void run(){
+            getSegments();
+            System.out.println("Количество сегментов " + segments);
+        }
+    }
+    private class Integer5{
+        private int a, b, freeSegments;
+        Integer5(){
+            a = 20;
+            b = 7;
+        }
+        private int getSegments(){
+            return freeSegments =  a % b;
+        }
+        private void run(){
+            getSegments();
+            System.out.println("Количество сегментов " + freeSegments);
+        }
     }
 }
 
