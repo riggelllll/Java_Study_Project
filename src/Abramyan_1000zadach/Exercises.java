@@ -15,9 +15,8 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer15 in1 = new Exercises().new Integer15();
+        Exercises.Integer20 in1 = new Exercises().new Integer20();
         in1.run();
-
 
 
     }
@@ -1026,7 +1025,72 @@ public class Exercises {
             System.out.println("Before " + NUM + " AFTER " + newNum);
         }
     }
+    private class Integer16{
+        private static final int NUM = 532;
+        private int newNum;
+        private void changeNum(){
+            Integer in = new Integer(NUM);
+            char tmp;
 
+            StringBuffer buffer = new StringBuffer(in.toString());
+            tmp = buffer.charAt(1);
+            buffer.setCharAt(1, buffer.charAt(2));
+            buffer.setCharAt(2, tmp);
+            newNum = Integer.parseInt(buffer.toString());
+        }
+        private void run(){
+            changeNum();
+            System.out.println("Before " + NUM + " AFTER " + newNum);
+        }
+    }
+    private class Integer17{
+        private static final int NUM = 3456;
+        private int num;
+        private void getNum(){
+            num = (NUM / 100) % 10;
+        }
+        private void run(){
+            getNum();
+            System.out.println(num);
+        }
+    }
+    private class Integer18{
+        private static final int NUM = 3456;
+        private int num;
+        private void getNum(){
+            num = (NUM / 1000) % 10;
+        }
+        private void run(){
+            getNum();
+            System.out.println(num);
+        }
+    }
+    private class Integer19{
+        private int secunds, minutes;
+        Integer19(){
+            secunds = 3900;
+        }
+        private int getMinutes(){
+            return  minutes = secunds / 60;
+        }
+        private void run(){
+            getMinutes();
+            System.out.println("secunds " + secunds + " minutes " + minutes);
+        }
+    }
+    private class Integer20{
+        private int secunds, hours;
+        Integer20(){
+            secunds = 3900;
+        }
+        private int getMinutes(){
+            return  hours = secunds / 60 / 60;
+        }
+        private void run(){
+            getMinutes();
+            System.out.println("secunds " + secunds + " hours " + hours);
+        }
+    }
 }
 
 
