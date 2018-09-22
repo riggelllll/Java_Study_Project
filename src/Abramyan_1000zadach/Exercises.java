@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer20 in1 = new Exercises().new Integer20();
+        Exercises.Integer21 in1 = new Exercises().new Integer21();
         in1.run();
 
 
@@ -1089,6 +1089,20 @@ public class Exercises {
         private void run(){
             getMinutes();
             System.out.println("secunds " + secunds + " hours " + hours);
+        }
+    }
+    private class Integer21{
+        private int seconds, lastSeconds;
+        private static final int SECONDS_IN_MINUTE = 60;
+        Integer21(){
+            seconds = 4567;
+        }
+        private int getLastSeconds(){
+            return lastSeconds = seconds % SECONDS_IN_MINUTE;
+        }
+        private void run(){
+            getLastSeconds();
+            System.out.println("lastSeconds " + lastSeconds);
         }
     }
 }
