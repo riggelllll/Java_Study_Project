@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer24 in1 = new Exercises().new Integer24();
+        Exercises.Integer30 in1 = new Exercises().new Integer30();
         in1.run();
 
 
@@ -1194,6 +1194,43 @@ public class Exercises {
             getNumberDayOfWeek();
             System.out.println("день недели " + numberDayOfWeek);
         }
+    }
+    private class Integer29{
+        private int a, b, c, quontity, freeSquare;
+        Integer29(){
+            a = 5;
+            b = 3;
+            c = 2;
+        }
+        private int getSquareQuontity(){
+            return quontity = (a / c) * (b / c);
+        }
+        private int getFreeSquare(){
+            int areaRectangle = a * b;
+            int areaSquare = c * c;
+            int areaSquares = areaSquare * quontity;
+            return freeSquare = areaRectangle - areaSquares;
+
+        }
+        private void run(){
+            getSquareQuontity();
+            getFreeSquare();
+            System.out.println("количество квадратов " + quontity + " Свободная площаль " + freeSquare);
+        }
+    }
+    private class Integer30{
+        private int year, century;
+        Integer30(){
+            year = 1850;
+        }
+        private int getCentury(){
+            return century = ((year - 1) / (100)) + 1;
+        }
+        private void run(){
+            getCentury();
+            System.out.println("Century " + century);
+        }
+
     }
 }
 
