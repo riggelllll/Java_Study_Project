@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer30 in1 = new Exercises().new Integer30();
+        Exercises.Boolean10 in1 = new Exercises().new Boolean10();
         in1.run();
 
 
@@ -1231,6 +1231,126 @@ public class Exercises {
             System.out.println("Century " + century);
         }
 
+    }
+    private class Boolean1{
+        private int number;
+        Boolean1(){
+            number = 5;
+        }
+        private void run(){
+            if (number > 0){
+                System.out.println("Число положительно");
+            }
+        }
+    }
+    private class Boolean2{
+        private int number;
+        Boolean2(){
+            number = 24;
+        }
+        private void run(){
+            if (number % 2 != 0){
+                System.out.println("Число нечетное");
+            }else {
+                System.out.println("Число четное");
+            }
+        }
+    }
+    private class Boolean3{
+        private int number;
+        Boolean3(){
+            number = 20;
+        }
+        private void run(){
+            if (number % 2 == 0){
+                System.out.println("Число четное");
+            }else {
+                System.out.println("Число нечетное");
+            }
+        }
+
+    }
+    private class Boolean4{
+        private int numberA, numberB;
+        Boolean4(){
+            numberA = 3;
+            numberB = 10;
+        }
+        private void run(){
+            if (numberA > 2 && numberB <= 3){
+                System.out.println("Это правда");
+            }else {
+                System.out.println("Ложь");
+            }
+        }
+    }
+    private class Boolean5{
+        private int numberA, numberB;
+        Boolean5(){
+            numberA = 3;
+            numberB = 10;
+        }
+        private void run(){
+            if (numberA >= 0 && numberB < -2){
+                System.out.println("Это правда");
+            }else {
+                System.out.println("Ложь");
+            }
+        }
+    }
+    private class Boolean6{
+        private int numberA, numberB, numberC;
+        Boolean6(){
+            numberA = 2;
+            numberB = 5;
+            numberC = 10;
+        }
+        protected void run(){
+            if (numberA < numberB && numberB< numberC){
+                System.out.println("True");
+            }else {
+                System.out.println("False");
+            }
+        }
+    }
+    private class Boolean7 extends Boolean6{}
+    private class Boolean8{
+        private int numberA, numberB;
+        Boolean8(){
+            numberA = 5;
+            numberB = 6;
+        }
+        private void run(){
+            if (numberA % 2 != 0 && numberB % 2 != 0){
+                System.out.println("Они нечетные ОБА");
+            }else {
+                System.out.println("Кто то четный");
+            }
+        }
+    }
+    private class Boolean9{
+        private int numberA, numberB;
+        Boolean9(){
+            numberA = 2;
+            numberB = 5;
+        }
+        private void run(){
+            if (numberA % 2 != 0 || numberB % 2 != 0){
+                System.out.println("Число нечетое");
+            }
+        }
+    }
+    private class Boolean10{
+        private int numberA, numberB;
+        Boolean10(){
+            numberA = 2;
+            numberB = 5;
+        }
+        private void run(){
+            if ((numberA + numberB) % 2 != 0){
+                System.out.println("ровно одно нечетное");
+            }
+        }
     }
 }
 
