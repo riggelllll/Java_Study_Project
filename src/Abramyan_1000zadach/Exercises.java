@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Integer21 in1 = new Exercises().new Integer21();
+        Exercises.Integer24 in1 = new Exercises().new Integer24();
         in1.run();
 
 
@@ -1103,6 +1103,96 @@ public class Exercises {
         private void run(){
             getLastSeconds();
             System.out.println("lastSeconds " + lastSeconds);
+        }
+    }
+    private class Integer22{
+        private int seconds, lastSeconds;
+        private static final int SECONDS_IN_MINUTE = 60;
+        private static final int MINUTES_IN_HOUR = 60;
+        Integer22(){
+            seconds = 4956;
+        }
+        private int getLastSeconds(){
+            return lastSeconds = seconds % (SECONDS_IN_MINUTE * MINUTES_IN_HOUR);
+        }
+        private void run(){
+            getLastSeconds();
+            System.out.println("lastSeconds " + lastSeconds);
+        }
+    }
+    private class Integer23{
+        private int seconds, lastMinutes;
+        private static final int SECONDS_IN_MINUTE = 60;
+        private static final int MINUTES_IN_HOUR = 60;
+        Integer23(){
+            seconds = 3665;
+        }
+        private int getLastSeconds(){
+            return lastMinutes = (seconds % (SECONDS_IN_MINUTE * MINUTES_IN_HOUR)) / 60;
+        }
+        private void run(){
+            getLastSeconds();
+            System.out.println("lastMinutes " + lastMinutes);
+        }
+    }
+    private class Integer24{
+        private int randomDay, numberDayOfWeek;
+        private static final int DAY_IN_WEEK = 7;
+        Integer24(){
+            randomDay = 142;
+        }
+        private int getNumberDayOfWeek(){
+            return numberDayOfWeek = randomDay % DAY_IN_WEEK;
+        }
+        private void run(){
+            getNumberDayOfWeek();
+            System.out.println("день недели " + numberDayOfWeek);
+        }
+
+    }
+    private class Integer25{
+        private int randomDay, numberDayOfWeek;
+        private static final int DAY_IN_WEEK = 7;
+        private static final int FIRST_JANUARY_THURSDAY = 3;
+        Integer25(){
+            randomDay = 142;
+        }
+        private int getNumberDayOfWeek(){
+            return numberDayOfWeek = (randomDay + FIRST_JANUARY_THURSDAY) % DAY_IN_WEEK;
+        }
+        private void run(){
+            getNumberDayOfWeek();
+            System.out.println("день недели " + numberDayOfWeek);
+        }
+    }
+    private class Integer26{
+        private int randomDay, numberDayOfWeek;
+        private static final int DAY_IN_WEEK = 7;
+        private static final int FIRST_JANUARY_THURSDAY = 2;
+        Integer26(){
+            randomDay = 142;
+        }
+        private int getNumberDayOfWeek(){
+            return numberDayOfWeek = randomDay % (DAY_IN_WEEK + 1);
+        }
+        private void run(){
+            getNumberDayOfWeek();
+            System.out.println("день недели " + numberDayOfWeek);
+        }
+    }
+    private class Integer27{
+        private int randomDay, numberDayOfWeek;
+        private static final int DAY_IN_WEEK = 7;
+        private static final int FIRST_JANUARY_THURSDAY = 2;
+        Integer27(){
+            randomDay = 142;
+        }
+        private int getNumberDayOfWeek(){
+            return numberDayOfWeek = (randomDay + 4) % (DAY_IN_WEEK + 1);
+        }
+        private void run(){
+            getNumberDayOfWeek();
+            System.out.println("день недели " + numberDayOfWeek);
         }
     }
 }
