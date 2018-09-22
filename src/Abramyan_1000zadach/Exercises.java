@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Boolean10 in1 = new Exercises().new Boolean10();
+        Exercises.Boolean15 in1 = new Exercises().new Boolean15();
         in1.run();
 
 
@@ -1349,6 +1349,91 @@ public class Exercises {
         private void run(){
             if ((numberA + numberB) % 2 != 0){
                 System.out.println("ровно одно нечетное");
+            }
+        }
+    }
+    private class Boolean11{
+        private int numberA, numberB;
+        Boolean11(){
+            numberA = 4;
+            numberB = 4;
+        }
+        private void run(){
+            if ((numberA + numberB) % 2 == 0){
+                System.out.println("числа одинаковой четности");
+            }else {
+                System.out.println("Числа разной четноти");
+            }
+        }
+    }
+    private class Boolean12{
+        private int numberA, numberB, numberC;
+        Boolean12(){
+            numberA = 4;
+            numberB = -4;
+            numberC = 5;
+        }
+        private void run(){
+            if (numberA > 0 && numberB > 0 && numberC > 0){
+                System.out.println("Все числа положительны");
+            }else {
+                System.out.println("Какое то число отрицательно");
+            }
+        }
+    }
+    private class Boolean13{
+        private int numberA, numberB, numberC;
+        Boolean13(){
+            numberA = -4;
+            numberB = -4;
+            numberC = -5;
+        }
+        private void run(){
+            if (numberA > 0 || numberB > 0 || numberC > 0){
+                System.out.println("Хотя бы одно число положительно");
+            }else {
+                System.out.println("Все отрицательны");
+            }
+        }
+    }
+    private class Boolean14{
+        private int numberA, numberB, numberC;
+        private boolean bA, bB, bC;
+        Boolean14(){
+            numberA = 4;
+            numberB = -4;
+            numberC = -5;
+        }
+        private void run(){
+            if (numberA > 0){bA = true;}
+            if (numberB > 0){bB = true;}
+            if (numberC > 0){bC = true;}
+
+            if (bA ^ bB ^ bC){
+                System.out.println("Ровно одно число положительно");
+            }else {
+                System.out.println("Не только одно положительно");
+            }
+        }
+    }
+    private class Boolean15{
+        private int numberA, numberB, numberC;
+        private boolean bA, bB, bC;
+        Boolean15(){
+            numberA = 4;
+            numberB = -4;
+            numberC = 5;
+        }
+        private void run(){
+            int counter = 0;
+            if (numberA > 0){bA = true; counter++;}
+            if (numberB > 0){bB = true; counter++;}
+            if (numberC > 0){bC = true; counter++;}
+
+            if (counter == 2){
+                System.out.println("Ровно два числа положительно");
+            }else {
+                System.out.println("Другой вариант");
             }
         }
     }
