@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Boolean20 in1 = new Exercises().new Boolean20();
+        Exercises.Boolean25 in1 = new Exercises().new Boolean25();
         in1.run();
 
 
@@ -1512,6 +1512,88 @@ public class Exercises {
            }else {
                System.out.println("Другой вариант");
            }
+        }
+    }
+    private class Boolean21{
+        private int number;
+        Boolean21(){
+            number = 346;
+        }
+        private void run(){
+            int leftN, midN, rightN;
+            leftN = number / 100;
+            midN  = (number % 100) / 10;
+            rightN = (number % 100) % 10;
+            if (rightN > midN && midN > leftN){
+                System.out.println("Цифры дают возврастающую последовательность");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean22{
+        private int number;
+        Boolean22(){
+            number = 222;
+        }
+        private void run(){
+            int leftN, midN, rightN;
+            leftN = number / 100;
+            midN  = (number % 100) / 10;
+            rightN = (number % 100) % 10;
+            if ((rightN > midN && midN > leftN) || (leftN > midN && midN > rightN)){
+                System.out.println("Цифры дают возврастающую или убывающую последовательность");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean23{
+        private int number;
+        Boolean23(){
+            number = 2332;
+        }
+        private void run(){
+            int n1, n2, n3, n4;//Цифры считаются слева на право
+            n1 = number / 1000;
+            n2  = (number % 1000) / 100;
+            n3 = ((number % 1000) % 100) / 10;
+            n4 =((number % 1000) % 100) % 10;
+            if (n1 == n4 && n2 == n3){
+                System.out.println("Число полиндром");
+            }else {
+                System.out.println("Число не полиндром");
+            }
+        }
+    }
+    private class Boolean24{
+        private int numA, numB, numC;
+        Boolean24(){
+            numA = 5;
+            numB = 7;
+            numC = 10;
+        }
+        private void run(){
+            int dicriminant = (int)Math.pow(numB, 2) - 4 * numA * numC;
+            if (dicriminant >= 0){
+                System.out.println("Квадратное уравнение имеет веществекнные корни");
+            }else {
+                System.out.println("Квадратное уравнение не имеет веществекнные корни");
+            }
+        }
+    }
+    private class Boolean25{
+        private int numX, numY;
+        Boolean25(){
+            numX = 2;
+            numY = 10;
+        }
+        private void run(){
+            if (numX < 0 && numY > 0){
+                System.out.println("Точка лежит во 2й координатной четверти");
+            }else {
+                System.out.println("Другой вариант");
+            }
         }
     }
 }
