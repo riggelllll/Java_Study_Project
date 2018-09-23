@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Boolean25 in1 = new Exercises().new Boolean25();
+        Exercises.Boolean30 in1 = new Exercises().new Boolean30();
         in1.run();
 
 
@@ -1591,6 +1591,82 @@ public class Exercises {
         private void run(){
             if (numX < 0 && numY > 0){
                 System.out.println("Точка лежит во 2й координатной четверти");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean26{
+        private int numX, numY;
+        Boolean26(){
+            numX = 2;
+            numY = 10;
+        }
+        private void run(){
+            if (numX > 0 && numY < 0){
+                System.out.println("Точка лежит во 4й координатной четверти");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean27{
+        private int numX, numY;
+        Boolean27(){
+            numX = -2;
+            numY = -10;
+        }
+        private void run(){
+            if ((numX < 0 && numY > 0) || (numX < 0 && numY < 0)){
+                System.out.println("Точка лежит во 2й ил 3й координатной четверти");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean28{
+        private int numX, numY;
+        Boolean28(){
+            numX = -2;
+            numY = -10;
+        }
+        private void run(){
+            if ((numX > 0 && numY > 0) || (numX < 0 && numY < 0)){
+                System.out.println("Точка лежит во 2й ил 3й координатной четверти");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean29{
+        private int numX, numY, numX1, numY1, numX2, numY2;
+        Boolean29(){
+            numX = -10;
+            numY = 1;
+            numX1 = -3;
+            numY1 = 3;
+            numX2 = 5;
+            numY2 = -5;
+        }
+        private void run(){
+            if ((numY < numY1 && numY > numY2) && (numX < numX2 && numX > numX1)){
+                System.out.println("Точка лежит в прямоугольнике");
+            }else {
+                System.out.println("Точка не лежит в прямоугольнике");
+            }
+
+        }
+    }
+    private class Boolean30{
+        private int numA, numB, numC;
+        Boolean30(){
+            numA = 3;
+            numB = 3;
+            numC = 3;
+        }
+        private void run(){
+            if (numA == numB && numB == numC){
+                System.out.println("Треугольник равносторонний");
             }else {
                 System.out.println("Другой вариант");
             }
