@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Boolean30 in1 = new Exercises().new Boolean30();
+        Exercises.Boolean35 in1 = new Exercises().new Boolean35();
         in1.run();
 
 
@@ -1669,6 +1669,81 @@ public class Exercises {
                 System.out.println("Треугольник равносторонний");
             }else {
                 System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean31{
+        private int numA, numB, numC;
+        Boolean31(){
+            numA = 3;
+            numB = 3;
+            numC = 3;
+        }
+        private void run(){
+            if (numA == numB){
+                System.out.println("Треугольник равнобедренный");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean32{
+        private int numA, numB, numC;
+        Boolean32(){
+            numA = 5;
+            numB = 5;
+            numC = 10;
+        }
+        private void run(){
+            if ((Math.pow(numA, 2) + Math.pow(numB, 2)) == Math.pow(numC, 2) ){
+                System.out.println("Треугольник прямоугольный");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean33{
+        private int numA, numB, numC;
+        Boolean33(){
+            numA = 5;
+            numB = 5;
+            numC = 10;
+        }
+        private void run(){
+            if ((numA + numB) > numC && (numB + numC) > numA &&(numC + numA) > numB ){
+                System.out.println("Треугольник существует");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean34{
+        private int coordX, coordY;
+        Boolean34(){
+            coordX = 3;
+            coordY = 7;
+        }
+        private void run(){
+            if ((coordY + coordX) % 2 != 0){
+                System.out.println("Данное поле является белым");
+            }else {
+                System.out.println("данное полея вляется черным");
+            }
+        }
+    }
+    private class Boolean35{
+        private int coordX1, coordY1, coordX2, coordY2;
+        Boolean35(){
+            coordX1 = 1;
+            coordY1 = 1;
+            coordX2 = 3;
+            coordY2 = 3;
+        }
+        private void run(){
+            if ((coordX1 + coordY1 + coordX2 + coordY2) % 2 == 0){
+                System.out.println("Данные поля имеют одинаковый цвет");
+            }else {
+                System.out.println("Данные поля имеют разный цвет");
             }
         }
     }
