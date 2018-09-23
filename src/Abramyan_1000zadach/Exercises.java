@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Boolean35 in1 = new Exercises().new Boolean35();
+        Exercises.Boolean40 in1 = new Exercises().new Boolean40();
         in1.run();
 
 
@@ -1746,6 +1746,87 @@ public class Exercises {
                 System.out.println("Данные поля имеют разный цвет");
             }
         }
+    }
+    private class Boolean36{
+        private int coordX1, coordY1, coordX2, coordY2;
+        Boolean36(){
+            coordX1 = 2;
+            coordY1 = 1;
+            coordX2 = 2;
+            coordY2 = 8;
+        }
+        private void run(){
+            if (coordX1 == coordX2 || coordY1 == coordY2){
+                System.out.println("Ладья ходит");
+            }else {
+                System.out.println("Ладья не ходит");
+            }
+        }
+    }
+    private class Boolean37{
+        private int coordX1, coordY1, coordX2, coordY2;
+        Boolean37(){
+            coordX1 = 2;
+            coordY1 = 1;
+            coordX2 = 2;
+            coordY2 = 8;
+        }
+        private void run(){
+            if (Math.abs(coordX1 - coordX2) < 2 && Math.abs(coordY1 - coordY2) < 2){
+                System.out.println("Ходит");
+            }else {
+                System.out.println("Не ходит");
+            }
+        }
+    }
+    private class Boolean38{
+        private int coordX1, coordY1, coordX2, coordY2;
+        Boolean38(){
+            coordX1 = 2;
+            coordY1 = 1;
+            coordX2 = 8;
+            coordY2 = 7;
+        }
+        private void run(){
+            if (Math.abs(coordX1 - coordX2) == Math.abs(coordY1 - coordY2)){
+                System.out.println("Ходит");
+            }else {
+                System.out.println("Не ходит");
+            }
+        }
+    }
+    private class Boolean39{
+        private int coordX1, coordY1, coordX2, coordY2;
+        Boolean39(){
+            coordX1 = 2;
+            coordY1 = 1;
+            coordX2 = 8;
+            coordY2 = 7;
+        }
+        private void run(){
+            if ((Math.abs(coordX1 - coordX2) == Math.abs(coordY1 - coordY2)) || (coordX1 == coordX2 || coordY1 == coordY2)){
+                System.out.println("Ходит");
+            }else {
+                System.out.println("Не ходит");
+            }
+        }
+    }
+    private class Boolean40{
+        private int coordX1, coordY1, coordX2, coordY2;
+        Boolean40(){
+            coordX1 = 2;
+            coordY1 = 1;
+            coordX2 = 3;
+            coordY2 = 3;
+        }
+        private void run(){
+            if ((Math.abs(coordX1 - coordX2) == 2 && Math.abs(coordY1 - coordY2) == 1) || (Math.abs(coordX1 - coordX2) == 1 && Math.abs(coordY1 - coordY2) == 2)){
+                System.out.println("Ходит");
+            }else {
+                System.out.println("Не ходит");
+            }
+        }
+
     }
 }
 
