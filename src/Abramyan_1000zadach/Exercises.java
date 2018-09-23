@@ -15,7 +15,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Boolean15 in1 = new Exercises().new Boolean15();
+        Exercises.Boolean20 in1 = new Exercises().new Boolean20();
         in1.run();
 
 
@@ -1435,6 +1435,83 @@ public class Exercises {
             }else {
                 System.out.println("Другой вариант");
             }
+        }
+    }
+    private class Boolean16{
+        private int number;
+        Boolean16(){
+            number = 30;
+        }
+        private void run(){
+            if (number > 9 && number < 100 && number % 2 == 0){
+                System.out.println("Число четное двузначное");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean17{
+        private int number;
+        Boolean17(){
+            number = 301;
+        }
+        private void run(){
+            if (number > 99 && number < 1000 && number % 2 != 0){
+                System.out.println("Число нечетное  трехзначное");
+            }else {
+                System.out.println("Другой вариант");
+            }
+        }
+    }
+    private class Boolean18{
+        private int numA, numB, numC;
+        Boolean18(){
+            numA = 2;
+            numB = 1;
+            numC = 2;
+        }
+        private void run(){
+            int counterMatch = 0;
+            if (numA == numB){counterMatch++;}
+            if (numA == numC){counterMatch++;}
+            if (numB == numC){counterMatch++;}
+            if (counterMatch >= 1){
+                System.out.println("Совпадает пар " + counterMatch);
+            }else {
+                System.out.println("Нет совпадений");
+            }
+        }
+    }
+    private class Boolean19{
+        private int numA, numB, numC;
+        Boolean19(){
+            numA = 2;
+            numB = 1;
+            numC = -2;
+        }
+        private void run(){
+            if ((numA == -numB) || (numA == -numC) || (numB == -numC)){
+                System.out.println("Хотя бы одна пара противоположна взаимно");
+            }else {
+                System.out.println("Нет взаимнопротивоположных");
+            }
+        }
+    }
+    private class Boolean20{
+        private int number;
+        Boolean20(){
+            number = 343;
+        }
+        private void run(){
+            int leftN, midN, rightN;
+            leftN = number / 100;
+            midN  = (number % 100) / 10;
+            rightN = (number % 100) % 10;
+           if (leftN != midN && leftN != rightN && midN != rightN){
+               System.out.println("Все цифры различны");
+           }else {
+               System.out.println("Другой вариант");
+           }
         }
     }
 }
