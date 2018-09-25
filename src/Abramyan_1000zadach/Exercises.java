@@ -16,7 +16,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.If5 in1 = new Exercises().new If5();
+        Exercises.If10 in1 = new Exercises().new If10();
         in1.run();
 
 
@@ -1917,7 +1917,80 @@ public class Exercises {
         }
     }
     private class If6{
-
+        private int num1, num2;
+        If6(){
+            num1 = RandomNumber.getNumber(-100, 100);
+            num2 = RandomNumber.getNumber(-100, 100);
+        }
+        private void run(){
+            if (num1 > num2){
+                System.out.println(num1);
+            }else {
+                System.out.println(num2);
+            }
+        }
+    }
+    private class If7{
+        private int num1, num2;
+        If7(){
+            num1 = RandomNumber.getNumber(-100, 100);
+            num2 = RandomNumber.getNumber(-100, 100);
+        }
+        private void run(){
+            if (num1 > num2){
+                System.out.println("1");
+            }else {
+                System.out.println("2");
+            }
+        }
+    }
+    private class If8{
+        private int num1, num2;
+        If8(){
+            num1 = RandomNumber.getNumber(-100, 100);
+            num2 = RandomNumber.getNumber(-100, 100);
+        }
+        private void run(){
+            if (num1 > num2){
+                System.out.println(num1 + " " + num2);
+            }else {
+                System.out.println(num2 + " " + num1);
+            }
+        }
+    }
+    private class If9{
+        private int num1, num2;
+        If9(){
+            num1 = RandomNumber.getNumber(-100, 100);
+            num2 = RandomNumber.getNumber(-100, 100);
+        }
+        private void run(){
+            System.out.println("Before " + num1 + " and " + num2);
+            if (num1 > num2){
+                num1 ^= (num2 ^= num1);
+                num2 ^= num1;
+            }
+            System.out.println("After " + num1 + " and " + num2);
+        }
+    }
+    private class If10{
+        private int num1, num2;
+        If10(){
+            num1 = RandomNumber.getNumber(-100, 100);
+            num2 = RandomNumber.getNumber(-100, 100);
+        }
+        private void run(){
+            System.out.println("Before " + num1 + " and " + num2);
+            if (num1 != num2){
+                int sum = num1 + num2;
+                num1 = sum;
+                num2 = sum;
+            }else if(num1 == num2){
+                num1 = 0;
+                num2 = 0;
+            }
+            System.out.println("After " + num1 + " and " + num2);
+        }
     }
 }
 
