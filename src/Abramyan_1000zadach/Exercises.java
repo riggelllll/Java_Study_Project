@@ -16,7 +16,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.If10 in1 = new Exercises().new If10();
+        Exercises.If15 in1 = new Exercises().new If15();
         in1.run();
 
 
@@ -1990,6 +1990,124 @@ public class Exercises {
                 num2 = 0;
             }
             System.out.println("After " + num1 + " and " + num2);
+        }
+    }
+    private class If11{
+        private int num1, num2;
+        If11(){
+            num1 = RandomNumber.getNumber(-100, 100);
+            num2 = RandomNumber.getNumber(-100, 100);
+        }
+        private void run(){
+            System.out.println("Before " + num1 + " and " + num2);
+            if (num1 != num2){
+                if (num1 > num2){
+                    num1 = num1;
+                    num2 = num1;
+                }else {
+                    num1 = num2;
+                    num2 = num2;
+                }
+            }else if(num1 == num2){
+                num1 = 0;
+                num2 = 0;
+            }
+            System.out.println("After " + num1 + " and " + num2);
+        }
+    }
+    private class If12{
+        private int num1, num2, num3, min;
+        If12(){
+            num1 = RandomNumber.getNumber(-100, 100);
+            num2 = RandomNumber.getNumber(-100, 100);
+            num3 = RandomNumber.getNumber(-100, 100);
+        }
+        private void run(){
+            if (num1 < num2 && num1 < num3){
+                min = num1;
+            }else if (num2 < num1 && num2 < num3){
+                min = num2;
+            }else {
+                min = num3;
+            }
+            System.out.println("Before " + num1 + " and " + num2 + " and " + num3);
+            System.out.println("min " + min);
+        }
+    }
+    private class If13{
+        private int num1, num2, num3, mid;
+        If13(){
+            num1 = RandomNumber.getNumber(10, 100);
+            num2 = RandomNumber.getNumber(10, 100);
+            num3 = RandomNumber.getNumber(10, 100);
+        }
+        private void run(){
+            if ((num2 < num1 && num1 < num3) || (num3 < num1 && num1 < num2)){
+                mid = num1;
+            }
+            if ((num1 < num2 && num2 < num3) || (num3 < num2 && num2 < num1)){
+                mid = num2;
+            }
+            if ((num1 < num3 & num3 < num2) || (num2 < num3 && num3 < num1)){
+                mid = num3;
+            }
+            System.out.println("Before " + num1 + " and " + num2 + " and " + num3);
+            System.out.println("min " + mid);
+        }
+    }
+    private class If14{
+        private int num1, num2, num3, min, max;
+        If14(){
+            num1 = RandomNumber.getNumber(10, 100);
+            num2 = RandomNumber.getNumber(10, 100);
+            num3 = RandomNumber.getNumber(10, 100);
+        }
+        private void run(){
+            System.out.println("Before " + num1 + " and " + num2 + " and " + num3);
+            if (num1 < num2 && num1 < num3){
+                min = num1;
+                if (num2 > num3){
+                    max = num2;
+                }else {
+                    max = num3;
+                }
+            }else if (num2 < num1 && num2 < num3){
+                min = num2;
+                if (num1 > num3){
+                    max = num1;
+                }else {
+                    max = num3;
+                }
+            }else if (num3 < num1 & num3 < num2){
+                min = num3;
+                if (num1 > num2){
+                    max = num1;
+                }else {
+                    max = num2;
+                }
+            }
+            System.out.println("Min " + min + " Max " + max);
+
+        }
+    }
+    private class If15{
+        private int num1, num2, num3, max, sum;
+        If15(){
+            num1 = RandomNumber.getNumber(10, 100);
+            num2 = RandomNumber.getNumber(10, 100);
+            num3 = RandomNumber.getNumber(10, 100);
+        }
+        private void run(){
+            System.out.println("Before " + num1 + " and " + num2 + " and " + num3);
+            if (num1 < num2 && num1 < num3){
+                sum = num2 + num3;
+            }else if (num2 < num1 && num2 < num3){
+                sum = num1 + num3;
+            }else if (num3 < num1 & num3 < num2){
+               sum = num1 + num2;
+            }
+            System.out.println("Sum " + sum);
+
         }
     }
 }
