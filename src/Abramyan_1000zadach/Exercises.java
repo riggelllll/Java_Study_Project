@@ -2,6 +2,7 @@ package Abramyan_1000zadach;
 
 import java.lang.reflect.Array;
 import java.util.Map;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -15,12 +16,19 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.Boolean40 in1 = new Exercises().new Boolean40();
+        Exercises.If5 in1 = new Exercises().new If5();
         in1.run();
 
 
     }
 
+    private static class RandomNumber{
+        //private static int number;
+        private static Random rnd = new Random(System.currentTimeMillis());
+        public static int getNumber(int min, int max){
+            return min + rnd.nextInt(max - min);
+        }
+    }
     private class Begin1{
         private int side;
 
@@ -1826,6 +1834,89 @@ public class Exercises {
                 System.out.println("Не ходит");
             }
         }
+
+    }
+    private class If1{
+        private int number;
+        If1(){
+            number = 5;
+        }
+        private void run(){
+            if (number > 0){
+                number++;
+            }
+            System.out.println(number);
+
+        }
+
+    }
+    private class If2{
+        private int number;
+        If2(){
+            number = 10;
+        }
+        private void run(){
+            if (number > 0){
+                number++;
+            }else {
+                number-= 2;
+            }
+            System.out.println(number);
+        }
+    }
+    private class If3{
+        private int number;
+        If3(){
+            number = RandomNumber.getNumber(-100, 100);
+            System.out.println("Before " + number);
+        }
+        private void run(){
+            if (number > 0){
+                number++;
+            }else if (number < 0){
+                number-= 2;
+            }else if (number == 0){
+                number = 10;
+            }
+            System.out.println("After " + number);
+        }
+    }
+    private class If4{
+        protected int[] nums;
+        If4(){
+            nums = new int[3];
+            for (int i = 0; i < 3; i++){
+                nums[i] = RandomNumber.getNumber(-100, 100);
+            }
+        }
+        private void run(){
+            int counter = 0;
+            for (int i = 0; i < 3; i++){
+                System.out.println(nums[i]);
+                if (nums[i] > 0){
+                    counter++;
+                }
+            }
+            System.out.println("количество " + counter);
+        }
+    }
+    private class If5 extends If4{
+        If5(){
+            super();
+        }
+        private void run(){
+            int posCounter = 0;
+            int negCounter = 0;
+            for (int i = 0; i < 3; i++){
+                System.out.println(nums[i]);
+                if (nums[i] > 0){
+                    posCounter++;
+                }else negCounter++;
+            }
+            System.out.println("положительные " + posCounter + " negtive " + negCounter);
+        }
+    }
+    private class If6{
 
     }
 }
