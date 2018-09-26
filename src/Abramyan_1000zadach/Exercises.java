@@ -15,8 +15,7 @@ public class Exercises {
 
 
     public static void main(String[] args) {
-
-        Exercises.If18 in1 = new Exercises().new If18();
+        Exercises.If20 in1 = new Exercises().new If20();
         in1.run();
 
 
@@ -2169,6 +2168,52 @@ public class Exercises {
                 number = 1;
             }
             System.out.println("Порядковый номер " + number);
+        }
+    }
+    private class If19{
+        private int num1, num2, num3, num4, number;
+        If19(){
+            num1 = 10;
+            num2 = 10;
+            num3 = 10;
+            num4 = 5;
+        }
+        private void run(){
+            System.out.println("Before " + num1 + " and " + num2 + " and " + num3 + " and " + num4);
+            if (num1 == num2){
+                if (num1 == num3){
+                    number = 4;
+                }else{
+                    number = 3;
+                }
+            }else{
+                if (num1 == num3){
+                    number = 2;
+                }else if (num2 == num3){
+                    number = 1;
+                }
+            }
+            System.out.println("Порядковый номер " + number);
+        }
+    }
+    private class If20{
+        private int pointA, pointB, pointC, diff;
+        String point;
+        If20(){
+            pointA = RandomNumber.getNumber(1, 4);
+            pointB = RandomNumber.getNumber(4, 7);
+            pointC = RandomNumber.getNumber(7, 10);
+        }
+        private void run(){
+            System.out.println("Init " + pointA + " and " + pointB + " and " + pointC);
+            if (Math.abs(pointA - pointB) > Math.abs(pointA - pointC)){
+                point = "C";
+                diff = Math.abs(pointA - pointC);
+            }else {
+                point = "B";
+                diff = Math.abs(pointA - pointB);
+            }
+            System.out.println("Point " + point + " diff " + diff);
         }
     }
 }
