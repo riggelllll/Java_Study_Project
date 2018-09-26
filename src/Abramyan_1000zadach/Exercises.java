@@ -16,7 +16,7 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        Exercises.If15 in1 = new Exercises().new If15();
+        Exercises.If18 in1 = new Exercises().new If18();
         in1.run();
 
 
@@ -2108,6 +2108,67 @@ public class Exercises {
             }
             System.out.println("Sum " + sum);
 
+        }
+    }
+    private class If16{
+        private int numA, numB, numC;
+        If16(){
+            numA = RandomNumber.getNumber(1, 100);
+            numB = RandomNumber.getNumber(1, 100);
+            numC = RandomNumber.getNumber(1, 100);
+        }
+        private void run(){
+            System.out.println("Before " + numA + " and " + numB + " and " + numC);
+            if (numA < numB && numB < numC){
+                numA*= 2;
+                numB*= 2;
+                numC*= 2;
+            }else {
+                numA = -numA;
+                numB = -numB;
+                numC = - numC;
+            }
+            System.out.println("After " + numA + " and " + numB + " and " + numC);
+        }
+    }
+    private class If17{
+        private int numA, numB, numC;
+        If17(){
+            numA = RandomNumber.getNumber(1, 100);
+            numB = RandomNumber.getNumber(1, 100);
+            numC = RandomNumber.getNumber(1, 100);
+        }
+        private void run(){
+            System.out.println("Before " + numA + " and " + numB + " and " + numC);
+            if ((numA < numB && numB < numC) || (numA > numB && numB > numC)){
+                numA*= 2;
+                numB*= 2;
+                numC*= 2;
+            }else {
+                numA = -numA;
+                numB = -numB;
+                numC = - numC;
+            }
+            System.out.println("After " + numA + " and " + numB + " and " + numC);
+        }
+    }
+    private class If18{
+        private int numA, numB, numC, number;
+        If18(){
+            numA = 5;
+            numB = 5;
+            numC = 7;
+        }
+        private void run(){
+            System.out.println("Before " + numA + " and " + numB + " and " + numC);
+            if (numA == numB){
+                number = 3;
+            }else if (numA == numC){
+                number = 2;
+            }else if (numB == numC){
+                number = 1;
+            }
+            System.out.println("Порядковый номер " + number);
         }
     }
 }
