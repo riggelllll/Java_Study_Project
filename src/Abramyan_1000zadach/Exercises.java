@@ -2315,9 +2315,24 @@ public class Exercises {
         }
         private void run(){
             if (x < -2 || x > 2){
-                x*= 2;
+                f*= 2;
             }else {
-                x*= -3;
+                f*= -3;
+            }
+        }
+    }
+    private class If26{
+        private int x, f;
+        If26(){
+            x = RandomNumber.getNumber(10, 20);
+        }
+        private void run(){
+            if (x <= 0){
+                f = -x;
+            }else if (x < 0 && x < 2){
+                f = x * x;
+            }else if (x >= 2){
+                f = 4;
             }
         }
     }
