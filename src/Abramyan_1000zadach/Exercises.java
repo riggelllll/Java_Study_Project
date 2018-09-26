@@ -15,7 +15,7 @@ public class Exercises {
 
 
     public static void main(String[] args) {
-        Exercises.If24 in1 = new Exercises().new If24();
+        Exercises.If30 in1 = new Exercises().new If30();
         in1.run();
 
 
@@ -2333,6 +2333,68 @@ public class Exercises {
                 f = x * x;
             }else if (x >= 2){
                 f = 4;
+            }
+        }
+    }
+    private class If28{
+        private int year, days;
+        If28(){
+            year = RandomNumber.getNumber(10, 2100);
+        }
+        private void run(){
+            if (year % 4 == 0){
+                if (year % 100 == 0 && year % 400 != 0){
+                    days = 365;
+                }else {
+                    days = 366;
+                }
+            }else {
+                days = 365;
+            }
+            System.out.println("Год " + year + " Дней " + days);
+        }
+    }
+    private class If29{
+        private int number;
+        If29(){
+            number = RandomNumber.getNumber(20, 50);
+        }
+        private void run(){
+            System.out.println("Number " + number);
+            if (number == 0){
+                System.out.println("Нулевое число");
+            }
+            if (number > 0){
+                System.out.println("Положительное");
+            }
+            if (number < 0){
+                System.out.println("Отрицательное");
+            }
+            if (number % 2 == 0){
+                System.out.println("Четное");
+            }else {
+                System.out.println("Нечетное");
+            }
+        }
+    }
+    private class If30{
+        private int number;
+        If30(){
+            number = RandomNumber.getNumber(1, 999);
+        }
+        private void run(){
+            System.out.println("Number " + number);
+            if (number % 2 == 0){
+                System.out.println("Четное");
+            }else {
+                System.out.println("Нечетное");
+            }
+            if (number < 10){
+                System.out.println("Однзначное");
+            }else if (number < 100){
+                System.out.println("Двузначное");
+            }else {
+                System.out.println("Трехзначное");
             }
         }
     }
