@@ -15,7 +15,7 @@ public class Exercises {
 
 
     public static void main(String[] args) {
-        Exercises.If20 in1 = new Exercises().new If20();
+        Exercises.If24 in1 = new Exercises().new If24();
         in1.run();
 
 
@@ -2214,6 +2214,111 @@ public class Exercises {
                 diff = Math.abs(pointA - pointB);
             }
             System.out.println("Point " + point + " diff " + diff);
+        }
+    }
+    private class If21{
+        private int pointX, pointY;
+        If21(){
+            pointX = RandomNumber.getNumber(0, 100);
+            pointY = RandomNumber.getNumber(0, 100);
+        }
+        private void run(){
+            System.out.println("X " + pointX + " Y " + pointY);
+            if (pointY == 0 && pointY == 0){
+                System.out.println("0");
+            }else if (pointX == 0){
+                System.out.println("1");
+            }else if (pointY == 0){
+                System.out.println("2");
+            }else {
+                System.out.println("3");
+            }
+        }
+    }
+    private class If22{
+        private int pointX, pointY;
+        If22(){
+            pointX = RandomNumber.getNumber(0, 100);
+            pointY = RandomNumber.getNumber(0, 100);
+        }
+        private void run(){
+            System.out.println("X " + pointX + " Y " + pointY);
+            if (pointX > 0 && pointY > 0){
+                System.out.println("1 четверть");
+            }else if (pointX < 0 && pointY > 0){
+                System.out.println("2 четверть");
+            }else if (pointX < 0 && pointY < 0){
+                System.out.println("3 четверть");
+            }else{
+                System.out.println("4 четверть");
+            }
+        }
+    }
+    private class If23{
+        private int p1x, p1y, p2x, p2y, p3x, p3y, p4x, p4y;
+        If23(){
+            p1x = 5;
+            p1y = 1;
+            p2x = 1;
+            p2y = 1;
+            p3x = 5;
+            p3y = 3;
+        }
+        private void run(){
+            if (p1y == p2y){
+                if (p1x == p3x){
+                    p4x = p2x;
+                    p4y = p3y;
+                }else {
+                    p4x = p1x;
+                    p4y = p3y;
+                }
+            }else {
+                if (p1y == p3y){
+                    if (p1x == p2x){
+                        p4x = p3x;
+                        p4y = p2y;
+                    }else {
+                        p4x = p1x;
+                        p4y = p2y;
+                    }
+                }else {
+                    p4y = p1y;
+                    if (p3x == p1x){
+                        p4x = p2x;
+                    }else {
+                        p4x = p3x;
+                    }
+                }
+            }
+            System.out.println("X4 " + p4x + " Y4 " + p4y);
+        }
+    }
+    private class If24{
+        private int x, f;
+        If24(){
+            x = RandomNumber.getNumber(10, 20);
+        }
+        private void run(){
+            if (x > 0){
+                f = (int)(2 * Math.sin(x));
+            }else {
+                f = 6 -x;
+            }
+            System.out.println("F " + f);
+        }
+    }
+    private class If25{
+        private int x, f;
+        If25(){
+            x = RandomNumber.getNumber(10, 20);
+        }
+        private void run(){
+            if (x < -2 || x > 2){
+                x*= 2;
+            }else {
+                x*= -3;
+            }
         }
     }
 }
