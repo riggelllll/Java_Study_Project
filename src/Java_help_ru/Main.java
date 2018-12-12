@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args)throws IOException {
 
-        Task3 task = new Task3();
-        task.update(2, task.arr);
+        Task4 task = new Task4("Шла саша по шосе и сосала бяку");
+        task.censored();
     }
 }
