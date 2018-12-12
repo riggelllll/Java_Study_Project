@@ -5,16 +5,16 @@ package Java_help_ru;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Task1 {
-    InputStreamReader reader;
-    StringBuffer buffer;
+class Task1 {
+    private InputStreamReader reader;
+     private StringBuffer buffer;
 
     Task1(){
      reader = new InputStreamReader(System.in);
      buffer = new StringBuffer();
     }
 
-    public void enterText() throws IOException {
+    void enterText() throws IOException {
        char t;
        int count = 0;
        do {
