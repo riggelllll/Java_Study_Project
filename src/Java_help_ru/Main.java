@@ -6,8 +6,7 @@ public class Main {
 
     public static void main(String[] args)throws IOException {
 
-        Task2 task = new Task2();
-        task.enterAge();
-        System.out.println(task.calculate());
+        Task3 task = new Task3();
+        task.update(2, task.arr);
     }
 }
