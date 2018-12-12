@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args)throws IOException {
+    public static void main(String[] args)throws Exception {
 
-        Task5 task = new Task5(12);
-        task.getS();
+        Task6 task = new Task6();
+        task.run();
     }
 }
