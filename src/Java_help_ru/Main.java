@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args)throws Exception {
 
-        Task9 task = new Task9("Vlad");
-        task.reverseStr(0, task.text.length());
+       Task10 task = new Task10();
+       task.run();
 
 
     }
