@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args)throws Exception {
 
-        Task7 task = new Task7();
-        task.run();
+        Task8 task = new Task8();
+        task.show();
     }
 }
