@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args)throws Exception {
 
-       Task10 task = new Task10();
-       task.run();
+       Task11 task = new Task11(3.4);
+        System.out.println(task.isInt());
 
 
     }
