@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args)throws Exception {
 
-       Task15 task = new Task15(101);
+       Task16 task = new Task16(5);
        task.run();
 
 
