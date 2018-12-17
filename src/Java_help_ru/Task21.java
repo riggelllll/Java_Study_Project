@@ -3,19 +3,19 @@ package Java_help_ru;
 import java.util.Scanner;
 
 public class Task21 {
-    private int num;
-    private int[]arr;
-    private Scanner scanner;
+    protected int num;
+    protected int[]arr;
+    protected Scanner scanner;
 
     Task21(){
         scanner = new Scanner(System.in);
     }
-    private void enterNum(){
+    protected void enterNum(){
         System.out.println("Введите число");
         num = scanner.nextInt();
         arr = new int[Integer.toString(num).length()];
     }
-    private void convertToArr(){
+    protected void convertToArr(){
        for (int i = arr.length-1; i >= 0; i--){
             arr[i] = num % 10;
             num = num/10;

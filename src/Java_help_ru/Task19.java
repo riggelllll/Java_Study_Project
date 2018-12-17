@@ -1,7 +1,10 @@
 package Java_help_ru;
 
 public class Task19 {
-    private int[][]in = {{1,2,3},{4,5,6}, {7,8,9}};
+    private int[][]in = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}};
     private int[][]out;
     Task19(){
         out = new int[3][3];
